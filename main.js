@@ -105,3 +105,35 @@ if(keypress=='67'){
     console.log("c");
 }
 }
+function up(){
+    if(playerY>=0){
+        playerY=playerY-block_image_height;
+        console.log("block_height"+block_image_height);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function down(){
+    if(playerY<=500){
+        playerY=playerY+block_image_height;
+        console.log("block_height"+block_image_height);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function left(){
+    if(playerX>=0){
+        playerX=playerX-block_image_width;
+        console.log("block_width"+block_image_width);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function right(){
+    if(playerX<=850){
+        playerX=playerX+block_image_width;
+        console.log("block_width"+block_image_width);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
